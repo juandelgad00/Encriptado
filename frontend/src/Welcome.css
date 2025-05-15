@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex; /* Para asegurar que el container ocupe toda la altura si el body es el scroll parent */
+  flex-direction: column; /* En caso de que haya contenido fuera del viewport */
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* O flex-grow: 1; si body es flex container */
+  padding: 20px; /* Para evitar que la card toque los bordes en pantallas pequeñas */
+  box-sizing: border-box;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para Safari */
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out forwards; /* 'forwards' mantiene el estado final de la animación */
+  max-width: 500px; /* Un ancho máximo para la tarjeta */
+  width: 90%; /* Para que sea responsiva */
+}
+
+.welcome-card h1 {
+  font-size: 2.2em; /* Ajustado para mejor lectura */
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.welcome-card p.welcome-message { /* Clase específica para el mensaje */
+  font-size: 1.25em; /* Ajustado para mejor lectura */
+  line-height: 1.6;
+  margin-bottom: 30px; /* Más espacio antes del botón */
+}
+
+.logout-button {
+  background-color: white; /* Fondo blanco, similar a los botones de login/register */
+  color: #555; /* Texto oscuro para contraste */
+  border: none;
+  padding: 12px 25px; /* Padding generoso */
+  border-radius: 8px;
+  font-size: 1em; /* Tamaño de fuente del botón */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  display: inline-block; /* Para que el padding y margin funcionen bien */
+  margin-top: 10px; /* Espacio si hay más elementos arriba */
+}
+
+.logout-button:hover {
+  background-color: #f0f0f0; /* Un blanco un poco más oscuro al pasar el mouse */
+  color: #333;
+}
+
+.logout-button:active {
+  transform: translateY(1px); /* Efecto de presionar */
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px); /* Sutil movimiento desde abajo */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .welcome-card h1 {
+    font-size: 1.8em;
+  }
+  .welcome-card p.welcome-message {
+    font-size: 1.1em;
+  }
+  .logout-button {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+}

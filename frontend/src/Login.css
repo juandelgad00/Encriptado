@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-image: url('https://img.icons8.com/ios-filled/50/000000/user.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 14px;
+}
+
+.login-box input::placeholder {
+  color: #eee;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 12px;
+}
+
+.forgot {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 10px;
+  color: yellow;
+  font-size: 13px;
+}

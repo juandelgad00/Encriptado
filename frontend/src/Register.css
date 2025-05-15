@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #280578, #4abac4);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-container,
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-box,
+.register-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-image: url('https://img.icons8.com/ios-filled/50/000000/user.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.login-box h2,
+.register-box h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-box input,
+.register-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.login-box input:focus,
+.register-box input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.login-box input::placeholder,
+.register-box input::placeholder {
+  color: #e0e0e0;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 13px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.forgot {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.login-box button,
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #555;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+
+.login-box button:hover,
+.register-box button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.error,
+.error-message,
+.success-message {
+  width: 100%;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.error {
+  background-color: rgba(255, 204, 0, 0.2);
+  color: #ffcc00;
+  border: 1px solid rgba(255, 204, 0, 0.5);
+}
+
+.error-message {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+}
+
+.success-message {
+  background-color: rgba(102, 204, 153, 0.2);
+  color: #66cc99;
+  border: 1px solid rgba(102, 204, 153, 0.5);
+}
+
+.register-link,
+.login-link {
+  margin-top: 25px;
+  color: #f0f0f0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.register-link a,
+.login-link a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-box,
+  .register-box {
+    padding: 30px 25px;
+    margin: 0 10px;
+  }
+
+  .login-box h2,
+  .register-box h2 {
+    font-size: 1.5em;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
